@@ -3,46 +3,65 @@
     padding: 0;
 } */
 
-.flex-container {
-    display: flex;
+.container-fluid {
     background-color: #333333;
 }
 
-#logo {
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+.navbar-brand {
+    font-family: 'Parisienne', cursive;
+    font-size: 27px;
+    color:lightgrey;
 }
 
-.nav_items {
-    margin-top: 18px;
-    margin-bottom: 18px;
+/* I got a little excited trying to figure out how to animate the text next to the logo, heh.
+Animate.css didn't have anything on how to trigger animations with states, but they mentioned keyframes.
+I went down that rabbit hole, and here I am. Keyframes are SO COOL! */
+
+@keyframes colorChange {
+    from { color: lightgray; text-shadow: none;}
+    to { color: lightblue; text-shadow: 3px 3px 3px lightblue;
+    }
 }
 
-/* Replace all px measurements with em or rem in the future. */
+@keyframes fadeOut {
+    0%, 100% { opacity: 1.0; }
+    50% {opacity: 0.0 ;}
+}
 
-.menu_option {
-    text-decoration: none;
+.navbar-brand:hover {
+    animation-name: colorChange;
+    animation-duration: 2s;
+    color: lightblue;
+    text-shadow: 3px 3px 3px lightblue;
+}
+
+.navbar-brand img:hover {
+    animation-name: fadeOut;
+    animation-duration: 2.5s;
+}
+
+.nav-link {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-size: 20px;
     color: orange;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-left: 24px;
-    margin-right: 24px;
-    border-radius: 15px;
-    
+    padding: 0 12px 0 12px;
+    margin: 0 2rem 0 2rem;
 }
 
-.menu_option:hover {
+.nav-link:hover {
+    color: orange;
+    border-radius: 15px;
     background-color: #555555;
     text-shadow: 1px 1px 1px white;
 }
 
-/* Consider flexbox for the container?
-Also, modify the border design for form_WIDE.
-It'll look so cool!*/
+.navbar-toggler {
+    background-color: lightgray;
+}
+
+/* This was the CSS for the search bar and cart text,
+neither of which I want in my website just yet.
 
 #form_WIDE {
     padding: 3px 300px 3px 0px;
@@ -59,6 +78,7 @@ button {
     right: 12px;
     color:lightgray;
 }
+*/
 
 .top_text {
     font-size: 10rem;
