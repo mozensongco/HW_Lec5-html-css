@@ -17,46 +17,14 @@
 
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
-
-    <!-- I own my-logo.png
-    Note to self: if I drop the tada animation, make sure to take it out of the header here too.-->
-
 </head>
 <body>
-
-<!-- Below is the HTML I had before, for reference.
-
-    <nav class="flex-container">
-        <div id="logo">
-            <img src="my-drawings/my-logo.png" width="54px" height="54px">
-        </div>
-        
-        <a href="#" class="nav_items menu_option">Home</a>
-        <a href="gallery.html" class="nav_items menu_option">Character Gallery</a>
-        <a href="whats_that_system.html" class="nav_items menu_option">What's that system?</a>
-        
-        <form class="nav_items">
-            <input id="form_WIDE" type="text" name="search">
-        </form>
-
-        <button class="nav_items">
-            <img src="search-icon.png" width="12px" height="12px">
-        </button>
-
-        <div class="right_align_stuff">
-            <br>check out this cart!
-            <img src="cart-icon.svg" width="18px" height="18px" style="background-color: lightgray;">
-        </div>
-    </nav>
-
--->
-
 
 <!-- I went on a whole tangent trying to use nav-pills and reading through Inspect for how to overwrite the Bootstrap styling.
 Then I realized I could just refine all my old CSS code, especially since I wanted to recreate the same hover effect... -->
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+        <div class="container-fluid nav-areas">
             <a class="navbar-brand" href="#">
                 <img src="my-drawings/my-logo.png" alt="Spook Saloon Logo" width="54px" height="54px" class="d-inline-block align-text-middle">
                 The Spook Saloon
@@ -81,11 +49,13 @@ Then I realized I could just refine all my old CSS code, especially since I want
         </div>
     </nav>
 
-    <p class="top_text">Welcome to the
+    <h1 class="top_text">Welcome to the
     <br><span id="spook_saloon" class="animate__animated animate__tada animate__repeat-3">Spook Saloon!</span>
-    </p>
+    </h1>
 
-    <h4>(Pardon our dust while we renovate!)</h4>
+    <h4 style="text-align: center;">(Pardon our dust while we renovate!)</h4>
+
+<!-- I still want to have this intro here, but it wouldn't be in a multi-column grid... 
 
     <p>This is a little space for me to talk about my favorite thing ever:
         <br><span>TTRPGs!</span>
@@ -93,21 +63,49 @@ Then I realized I could just refine all my old CSS code, especially since I want
         <br> You've probably heard of Dungeons & Dragons - that's just one of the many TTRPGs out there!
     </p>
 
-<!--
-    <footer class="flex-container">
-        <a href="#" class="menu_option">Home</a>
-        <a href="gallery.html" class="menu_option">Character Gallery</a>
-        <a href="whats_that_system.html" class="menu_option">What's that system?</a>
-        
-        <div class="right_align_stuff">
-            have some surprise text!
-        </div>
-
-    </footer>
+    The content below will probably be moved to the planned "Spook Saloon Staff" page eventually.
 -->
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="my-drawings/me-but-also-ven.jpeg" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+            <p>
+                This is me! Mozen!
+                <br>(Well, sorta. This is a drawing of one of my characters,
+                but I used myself as a reference. It's also my profile picture
+                on social media, so it's basically me.)
+                <br>
+                <br>Aside from enjoying TTRPGs, I also like creative writing and 
+                voice acting. Both of those kind of stem from TTRPGs though.
+                <br>
+                <br>I'm also genderfluid and use he/they pronouns.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <p>
+                This is Mr. Cloud.
+                <br>
+                <br>If you want to order a drink here, he's the cumulus cloud to ask!
+                Not that you'd need to - people say he can read the atmosphere well enough
+                that he knows what kind of drink you're looking for as soon as you walk in.
+                <br>
+                <br>Just be nice. He may be a little stormy, but he's not about to rain on any parades
+                (unless you start drama).
+            </p>
+        </div>
+        <div class="col-md-4">
+            <img src="my-drawings/my-logo.png" class="img-fluid">
+        </div>
+    </div>
+</div>
+
     <footer>
-        <div class="container-fluid">
+        <div class="container-fluid nav-areas">
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Home</a>
